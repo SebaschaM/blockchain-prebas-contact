@@ -11,6 +11,9 @@ contract("TaskContract", () => {
       const address = this.taskContract.address;
 
       assert.notEqual(address, 0x0);
+      assert.notEqual(address, "");
+      assert.notEqual(address, null);
+      assert.notEqual(address, undefined);
     })
   );
 });
