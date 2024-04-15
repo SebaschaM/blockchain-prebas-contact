@@ -22,6 +22,7 @@ contract TasksContract {
         string memory _tittle,
         string memory _description
     ) public {
+        taskCount++;
         tasks[taskCount] = Task(
             taskCount,
             _tittle,
@@ -29,7 +30,6 @@ contract TasksContract {
             false,
             block.timestamp
         );
-        taskCount++;
     }
 
     function toogleDone(uint _id) public {
